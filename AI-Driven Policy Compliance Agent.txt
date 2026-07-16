@@ -1,0 +1,109 @@
+                                             AI-Driven Policy Compliance Agent
+
+An intelligent, automated configuration auditing engine that pairs large language models (LLMs) with predictive machine learning algorithms to verify system environments against organizational compliance rules.
+
+Introduction
+
+Maintaining continuous compliance across cloud assets, firewalls, and server infrastructure is notoriously difficult when relying on manual human reviews. This project bridges that gap. It acts as an autonomous digital auditor, parsing raw text-based policy documents, matching them against running infrastructure configurations, reporting exact structural violations, and forecasting future security risk scores.
+
+What the Project Does
+
+•	Automated Asset Auditing: Cross-references complex infrastructure states against raw, plain-text security                              
+        policies.
+
+•	Dual-Engine Checking: Evaluates environments natively through OpenAI's structured JSON models, with an 
+        automatic, zero-dependency, local deterministic rules engine failover.
+
+•	Risk Score Forecasting: Leverages predictive statistical modeling to forecast overall enterprise infrastructure
+        Vulnerability risks based on structural violation weights.
+
+•	Interactive Threat Simulation: Provides an active security sandbox panel allowing engineers to safely flip 
+        Configuration switches to see risk indexing dynamically recalculate in real time.
+
+How It Works
+
+1.	Ingestion & Data Extraction: The system reads unstructured organizational text policies alongside machine-
+        readable JSON system asset snapshots.
+
+2.	AI Semantic Audit Evaluation: The script constructs structured prompts demanding a rigid JSON response matrix 
+        schema containing failure reasons and successful checkpoints.
+
+3.	ML Risk Matrix Mapping: If vulnerabilities are found, the raw total is fed to a scikit-learn Ridge Regression
+        engine trained on historical organizational incident histories to compute an optimized risk threat index.
+
+4.	Dashboard Serialization: UI presentation columns, state checkboxes, dynamic tabs, and metric badges update 
+        synchronously via individual state bindings.
+Tech Stack Used
+
+•	Frontend Dashboard: Streamlit (High-performance web rendering framework)
+•	AI Orchestration: OpenAI API (gpt-4o-mini with forced Structured Outputs)
+•	Predictive Analytics Engine: Scikit-Learn (Ridge Linear Regression)
+•	Data Pipelines: Pandas & NumPy (Matrix slicing and statistical data tracking)
+•	Data Interchange Formatting: JSON Native Library
+
+The Output
+
+When a compliance audit run finishes, the platform populates a unified analysis matrix dashboard:
+
+•	Metric Badges: Clear score blocks showing the total passed count, total failed count, and the precise final
+        computed numerical risk forecast.
+
+•	Violations Report Tab: Custom contextual red callout blocks (st.error) identifying the exact broken security 
+        condition along with human-readable rationale explanations.
+
+•	Compliant Controls Tab: Reassuring blue check highlights showing which security vectors currently satisfy 
+        company standards.
+
+How to Run the Project
+
+1. Clone the Directory
+
+        Place your app.py script into your project directory. Open your system command line tool (such as PowerShell or                   
+        Command Prompt) and navigate there:
+                             cd Desktop\Agentic AI Policy Compliance"
+2. Install Required Dependencies
+
+        Execute the unified pip installation wrapper command to populate all necessary framework libraries:
+
+                pip install streamlit pandas numpy matplotlib scikit-learn openai
+
+3. Establish Secret API Authentication Environment Variables (Optional)
+   If you wish to use live LLM intelligence instead of the local hardcoded engine fallback, bind your project security 
+   key string:
+
+On Windows Command Prompt:
+
+            set OPENAI_API_KEY=your-actual-api-key-here 
+
+On Windows PowerShell:
+            $env:OPENAI_API_KEY="your-actual-api-key-here"
+4. Execute via Streamlit CLI Runtime Engine
+
+   Launch the web server using the dedicated wrapper keyword tool (do not launch via raw python app.py text calls):
+   streamlit run app.py
+
+Project Outcome & Who Uses It
+
+   This prototype shifts compliance from a reactive, annual spreadsheet chore to a continuous, proactive pipeline tool.
+
+  Target Users:
+
+•	DevSecOps Engineers: To audit infrastructure-as-code files automatically before executing actual server 
+        deployments.
+•	IT Compliance Auditors: To run lightweight, rapid periodic compliance sampling across system layers without 
+        complex database manual query queries.
+•	Chief Information Security Officers (CISOs): To review rolling real-time mathematical risk index ratings across 
+        active company divisions.
+
+  Next Steps:
+
+•	Multi-Format Ingestion File Parsers: Scale out file utilities to read uploaded PDF policies, Terraform plans 
+        (.tf), or Kubernetes configurations directly.
+•	Advanced Risk Classifiers: Swap the simple linear Ridge tracking array out for a complex Random Forest or 
+        XGBoost algorithm capable of weighting system-critical vulnerabilities heavier than minor policy warnings.
+•	Auto-Remediation Execution Loops: 
+        Introduce an automated resolution layer capable of writing specific patch code snippets to fix the identified 
+        compliance failures automatically.
+
+
+
