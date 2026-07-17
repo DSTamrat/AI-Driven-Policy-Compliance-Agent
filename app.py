@@ -96,7 +96,7 @@ class ComplianceXAI:
 # -----------------------------------------------------------------------------
 # GRAPHICAL DISPLAY PRESENTATION LAYER
 # -----------------------------------------------------------------------------
-st.title("🛡️ Enterprise AI Policy Compliance Agent")
+st.title(" Enterprise AI Policy Compliance Agent")
 st.markdown("Automate governance auditing by uploading production text parameters and live configuration metrics.")
 st.markdown("---")
 
