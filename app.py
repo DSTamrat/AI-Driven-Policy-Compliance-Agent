@@ -7,7 +7,7 @@ from sklearn.linear_model import Ridge
 import os
 
 # Page layout configurations
-st.set_page_config(page_title="AI Policy Compliance Agent", page_icon="🛡️", layout="wide")
+st.set_page_config(page_title="AI Policy Compliance Agent", page_icon="", layout="wide")
 
 # Default values for smooth fallback
 DEFAULT_POLICY = """COMPANY SECURITY POLICY RULES v4.2:
@@ -101,7 +101,7 @@ st.markdown("Automate governance auditing by uploading production text parameter
 st.markdown("---")
 
 # Sidebar Configuration Control Center for Uploads
-st.sidebar.header("📁 Ingestion Control Center")
+st.sidebar.header(" Ingestion Control Center")
 uploaded_policy = st.sidebar.file_uploader("Upload Corporate Policy (.txt)", type=["txt"])
 uploaded_config = st.sidebar.file_uploader("Upload System Configuration (.json)", type=["json"])
 
@@ -134,7 +134,7 @@ col3.metric(label="Active System Violations", value=violations_count, delta="Act
 col4.metric(label="Target System Asset", value=target_asset)
 
 # Dynamic Table View
-st.markdown("### 🔍 Live Configuration Audit Matrix")
+st.markdown("###  Live Configuration Audit Matrix")
 if not processed_df.empty:
     st.dataframe(processed_df[["Rule ID", "Component", "Description", "Status", "Value"]], use_container_width=True)
 else:
@@ -144,7 +144,7 @@ st.markdown("---")
 left_col, right_col = st.columns(2)
 
 with left_col:
-    st.markdown("### 📊 Explainable AI (XAI) Impact Analysis")
+    st.markdown("###  Explainable AI (XAI) Impact Analysis")
     if not processed_df.empty and violations_count > 0:
         fig, ax = plt.subplots(figsize=(6, 4.2))
         violation_df = processed_df[processed_df["Status"] == "Violated"]
@@ -154,10 +154,10 @@ with left_col:
         ax.set_title("Local Risk Weight Isolation Breakdown")
         st.pyplot(fig)
     else:
-        st.success("🎉 Zero risk deductions detected. System parameters are running fully optimal.")
+        st.success(" Zero risk deductions detected. System parameters are running fully optimal.")
 
 with right_col:
-    st.markdown("### 🤖 Agentic Playbook Remediation Script")
+    st.markdown("###  Agentic Playbook Remediation Script")
     if not processed_df.empty and violations_count > 0:
         violated_components = violation_df["Component"].tolist()
         selected_component = st.selectbox("Select Component to Remediate:", violated_components)
